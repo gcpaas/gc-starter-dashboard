@@ -18,7 +18,7 @@ import java.io.Serializable;
  * @Version 1.0.0
  */
 @Data
-@TableName(value = "big_screen_biz_component")
+@TableName(value = "dashboard_biz_component")
 @ApiModel
 public class BizComponentEntity extends SuperEntity implements Serializable {
 
