@@ -48,119 +48,14 @@ public interface PageDesignConstant {
         interface Type {
 
             /**
-             * 数字
-             */
-            String BIG_NUMBER = "bigNumber";
-
-            /**
-             * 数字带趋势图
-             */
-            String BIG_NUMBER_WITH_TREND = "bigNumberWithTrend";
-
-            /**
-             * 柱状图
-             */
-            String BAR = "bar";
-
-            /**
-             * 分组柱状图
-             */
-            String GROUP_BAR = "groupBar";
-
-            /**
-             * 饼图
-             */
-            String PIE = "pie";
-
-            /**
-             * 环形饼图
-             */
-            String ANNULAR_PIE = "annularPie";
-
-            /**
-             * 词云
-             */
-            String WORD_CLOUD = "wordCloud";
-
-            /**
-             * 表格
-             */
-            String TABLES = "tables";
-
-            /**
-             * 普通表格
-             */
-            String NORMAL_TABLE = "normalTable";
-
-            /**
-             * 聚合表格
-             */
-            String AGGREGATE_TABLE = "aggregateTable";
-
-            /**
-             * 折线图
-             */
-            String LINE = "lineChart";
-
-            /**
-             * 多折线图
-             */
-            String MULTI_LINE = "multiLineChart";
-
-            /**
-             * 排行榜
-             */
-            String RANKING = "ranking";
-
-            /**
-             * 趋势图（柱状）
-             */
-            String BIG_NUMBER_WITH_BAR = "bigNumberWithBar";
-
-            /**
              * tab页
              */
             String TABS = "tabs";
 
             /**
-             * 树
-             */
-            String TREE = "tree";
-
-            /**
-             * 树表
-             */
-            String TREE_TABLE = "treeTable";
-
-            /**
-             * 雷达图
-             */
-            String RADAR = "radar";
-
-            /**
-             * 散点图
-             */
-            String SCATTER = "scatter";
-
-            /**
              * 轮播图
              */
             String CAROUSEL = "carousel";
-
-            /**
-             * 当前时间
-             */
-            String CURRENT_TIME = "currentTime";
-
-            /**
-             * 水波图
-             */
-            String LIQUID = "liquid";
-
-            /**
-             * 仪表盘
-             */
-            String GAUGE = "gauge";
 
             /**
              * 详情
@@ -173,14 +68,14 @@ public interface PageDesignConstant {
             String MULTIPLE_NUMBER = "multipleNumberChart";
 
             /**
+             * 表格
+             */
+            String TABLES = "tables";
+
+            /**
              * 外链
              */
             String IFRAME = "iframeChart";
-
-            /**
-             * 链接
-             */
-            String LINK = "linkChart";
 
             /**
              * 倒计时
@@ -188,10 +83,68 @@ public interface PageDesignConstant {
             String TIME_COUNT_DOWN = "timeCountDown";
 
             /**
-             * 标题
+             * 当前时间
              */
-            String TITLE = "titles";
+            String CURRENT_TIME = "currentTime";
 
+            /**
+             * 文本
+             */
+            String TEXT = "texts";
+
+            /**
+             * 装饰边框
+             */
+            String BORDER = "border";
+
+            /**
+             * 滚动面板
+             */
+            String SCREEN_SCROLL_BOARD = "screenScrollBoard";
+
+            /**
+             * 滚动排行榜
+             */
+            String SCREEN_SCROLL_RANKING = "screenScrollRanking";
+            /**
+             * 自定义组件
+             */
+            String CUSTOM_COMPONENT = "customComponent";
+
+            /**
+             * 地图
+             */
+            String MAP = "map";
+
+            /**
+             * 图标
+             */
+            String SVGS = "svgs";
+
+            /**
+             * 数字翻牌器
+             */
+            String DIGITAL_FLOP = "digitalFlop";
+
+            /**
+             * 视频
+             */
+            String VIDEO = "video";
+
+            /**
+             * 输入框
+             */
+            String INPUT = "input";
+
+            /**
+             * 按钮
+             */
+            String BUTTON = "button";
+
+            /**
+             * 超链接
+             */
+            String LINK = "linkChart";
 
         }
 

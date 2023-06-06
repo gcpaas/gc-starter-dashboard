@@ -1,10 +1,10 @@
 package com.gccloud.dashboard.core.module.chart.components;
 
+import com.gccloud.dashboard.core.constant.PageDesignConstant;
 import com.gccloud.dashboard.core.module.chart.bean.Btn;
 import com.gccloud.dashboard.core.module.chart.bean.Chart;
 import com.gccloud.dashboard.core.module.chart.bean.Field;
-
-import com.gccloud.dashboard.core.constant.PageDesignConstant;
+import com.gccloud.dashboard.core.module.chart.components.datasource.BaseChartDataSource;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 
@@ -13,10 +13,12 @@ import java.util.List;
 /**
  * @author hongyang
  * @version 1.0
- * @date 2022/8/15 17:06
+ * @date 2023/3/13 16:44
  */
 @Data
-public class TablesChart extends Chart {
+public class DashboardTablesChart extends Chart {
+    @ApiModelProperty(notes = "数据源")
+    private BaseChartDataSource dataSource;
 
     @ApiModelProperty(notes = "类型")
     private String type = PageDesignConstant.DashBoard.Type.TABLES;
@@ -72,6 +74,12 @@ public class TablesChart extends Chart {
 
         @ApiModelProperty(notes = "是否开启斑马纹")
         private boolean stripe = false;
+
+        @ApiModelProperty(notes = "表格偶数行背景颜色")
+        private String evenRowBackgroundColor;
+
+        @ApiModelProperty(notes = "表格奇数行背景颜色")
+        private String oddRowBackgroundColor;
 
     }
 

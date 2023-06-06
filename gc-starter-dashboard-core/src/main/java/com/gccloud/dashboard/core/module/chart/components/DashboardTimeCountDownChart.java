@@ -1,19 +1,19 @@
 package com.gccloud.dashboard.core.module.chart.components;
 
-import com.gccloud.dashboard.core.module.chart.bean.Chart;
 import com.gccloud.dashboard.core.constant.PageDesignConstant;
+import com.gccloud.dashboard.core.module.chart.bean.Chart;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 
 import java.util.Date;
 
 /**
- * 时间倒计时组件、不用后端返回数据、前端直接显示
- *
- * @author liuchengbiao
+ * @author hongyang
+ * @version 1.0
+ * @date 2023/3/13 16:44
  */
 @Data
-public class TimeCountDownChart extends Chart {
+public class DashboardTimeCountDownChart extends Chart {
     /**
      * 描述
      */
@@ -47,5 +47,6 @@ public class TimeCountDownChart extends Chart {
         private String color;
 
     }
+
 
 }

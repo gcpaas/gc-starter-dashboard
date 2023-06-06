@@ -1,17 +1,17 @@
 package com.gccloud.dashboard.core.module.chart.components;
 
-import com.gccloud.dashboard.core.module.chart.bean.Chart;
 import com.gccloud.dashboard.core.constant.PageDesignConstant;
+import com.gccloud.dashboard.core.module.chart.bean.Chart;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 
 /**
- * 时间组件、不用后端返回数据、前端直接显示
- *
- * @author liuchengbiao
+ * @author hongyang
+ * @version 1.0
+ * @date 2023/3/16 16:44
  */
 @Data
-public class CurrentTimeChart extends Chart {
+public class DashboardCurrentTimeChart extends Chart {
 
     @ApiModelProperty(notes = "时间格式")
     private String dateFormat;
@@ -34,5 +34,4 @@ public class CurrentTimeChart extends Chart {
         @ApiModelProperty(notes = "字体颜色")
         private String color;
     }
-
 }
