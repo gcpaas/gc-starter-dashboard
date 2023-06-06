@@ -76,6 +76,24 @@ CREATE TABLE `dashboard_type` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='大屏、资源库、组件库分类';
 
 
+DROP TABLE IF EXISTS `dashboard_component`;
+CREATE TABLE `dashboard_component` (
+    `id`             bigint(64)   NOT NULL AUTO_INCREMENT,
+    `name`           varchar(100) NOT NULL DEFAULT '' COMMENT '业务组件中文名称',
+    `code`           varchar(255) NOT NULL DEFAULT '' COMMENT '业务组件编码，唯一标识符',
+    `type`          varchar(255) NOT NULL DEFAULT '' COMMENT '分组',
+    `cover_picture`  varchar(255) NOT NULL DEFAULT '' COMMENT '封面图片文件路径',
+    `vue_content`     longtext COMMENT 'vue组件内容',
+    `setting_content` longtext COMMENT '组件配置内容',
+    `order_num`      bigint(64)   NOT NULL DEFAULT '0' COMMENT '排序',
+    `remark`         varchar(100) NOT NULL DEFAULT '' COMMENT '备注',
+    `update_date`    timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '更新时间',
+    `create_date`    timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
+    `module_code` varchar(255) NOT NULL DEFAULT '' COMMENT '模块编码',
+    `del_flag` tinyint(2) NOT NULL DEFAULT '0' COMMENT '删除标识',
+    PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='业务组件表';
+
 DROP TABLE IF EXISTS `dashboard_category_tree`;
 CREATE TABLE `dashboard_category_tree` (
   `id` bigint(64) NOT NULL AUTO_INCREMENT COMMENT '主键',
