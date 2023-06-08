@@ -14,7 +14,7 @@ import lombok.Data;
 public class DashboardScrollRankingChart extends Chart {
 
     @ApiModelProperty(notes = "类型")
-    private String type = PageDesignConstant.DashBoard.Type.SCREEN_SCROLL_RANKING;
+    private String type = PageDesignConstant.DashBoard.Type.DASHBOARD_SCROLL_RANKING;
 
     @ApiModelProperty(notes = "个性化")
     private Customize customize = new Customize();

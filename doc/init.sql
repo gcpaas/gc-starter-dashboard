@@ -76,8 +76,8 @@ CREATE TABLE `dashboard_type` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='大屏、资源库、组件库分类';
 
 
-DROP TABLE IF EXISTS `dashboard_component`;
-CREATE TABLE `dashboard_component` (
+DROP TABLE IF EXISTS `dashboard_biz_component`;
+CREATE TABLE `dashboard_biz_component` (
     `id`             bigint(64)   NOT NULL AUTO_INCREMENT,
     `name`           varchar(100) NOT NULL DEFAULT '' COMMENT '业务组件中文名称',
     `code`           varchar(255) NOT NULL DEFAULT '' COMMENT '业务组件编码，唯一标识符',

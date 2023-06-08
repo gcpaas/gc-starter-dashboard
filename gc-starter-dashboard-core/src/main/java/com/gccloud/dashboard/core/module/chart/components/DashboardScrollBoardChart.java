@@ -17,7 +17,7 @@ import java.util.List;
 public class DashboardScrollBoardChart extends Chart {
 
     @ApiModelProperty(notes = "类型")
-    private String type = PageDesignConstant.DashBoard.Type.SCREEN_SCROLL_BOARD;
+    private String type = PageDesignConstant.DashBoard.Type.DASHBOARD_SCROLL_BOARD;
 
     @ApiModelProperty(notes = "个性化")
     private Customize customize = new Customize();

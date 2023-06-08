@@ -100,12 +100,12 @@ public interface PageDesignConstant {
             /**
              * 滚动面板
              */
-            String SCREEN_SCROLL_BOARD = "screenScrollBoard";
+            String DASHBOARD_SCROLL_BOARD = "dashboardScrollBoard";
 
             /**
              * 滚动排行榜
              */
-            String SCREEN_SCROLL_RANKING = "screenScrollRanking";
+            String DASHBOARD_SCROLL_RANKING = "dashboardScrollRanking";
             /**
              * 自定义组件
              */
