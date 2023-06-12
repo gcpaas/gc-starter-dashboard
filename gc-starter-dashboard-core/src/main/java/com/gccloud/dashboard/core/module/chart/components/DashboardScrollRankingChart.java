@@ -5,6 +5,8 @@ import com.gccloud.dashboard.core.module.chart.bean.Chart;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 
+import java.util.LinkedList;
+
 /**
  * @author hongyang
  * @version 1.0
@@ -26,7 +28,7 @@ public class DashboardScrollRankingChart extends Chart {
         private Integer highlightNum;
 
         @ApiModelProperty(notes = "高亮显示自定义样式")
-        private HighlightStyle highlightStyle;
+        private LinkedList<HighlightStyle> highlightStyle;
     }
 
     @Data
