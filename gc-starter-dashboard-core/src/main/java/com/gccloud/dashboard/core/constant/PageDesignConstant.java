@@ -146,6 +146,11 @@ public interface PageDesignConstant {
              */
             String LINK = "linkChart";
 
+            /**
+             * 超链接
+             */
+            String ICON_LINK = "icon_link";
+
         }
 
         interface TimeRange {
