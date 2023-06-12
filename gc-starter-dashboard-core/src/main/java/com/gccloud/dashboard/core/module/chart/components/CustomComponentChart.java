@@ -71,6 +71,12 @@ public class CustomComponentChart extends Chart {
         @ApiModelProperty(notes = "所属样式分组")
         private String groupName;
 
+        @ApiModelProperty(notes = "最大")
+        private Integer max;
+
+        @ApiModelProperty(notes = "最小")
+        private Integer min;
+
     }
 
 
