@@ -22,21 +22,21 @@ public class DashboardScrollRankingChart extends Chart {
     @Data
     public static class Customize {
 
-        @ApiModelProperty(notes = "滚动条数")
-        private Integer rowNum;
+        @ApiModelProperty(notes = "高亮个数")
+        private Integer highlightNum;
 
-        @ApiModelProperty(notes = "滚动间隔时间")
-        private Integer waitTime;
+        @ApiModelProperty(notes = "高亮显示自定义样式")
+        private HighlightStyle highlightStyle;
+    }
 
-        @ApiModelProperty(notes = "是否轮播")
-        private String carousel;
+    @Data
+    public static class HighlightStyle {
 
-        @ApiModelProperty(notes = "单位")
-        private String unit;
+        @ApiModelProperty(notes = "高亮颜色")
+        private String highlightColor;
 
-        @ApiModelProperty(notes = "是否自动排序")
-        private Boolean sort;
-
+        @ApiModelProperty(notes = "高亮标记")
+        private Integer mark;
     }
 
 }

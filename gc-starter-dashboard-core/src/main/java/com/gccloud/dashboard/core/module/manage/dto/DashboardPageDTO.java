@@ -66,7 +66,33 @@ public class DashboardPageDTO extends BasePageDTO {
     @ApiModelProperty(notes = "类型")
     private String type;
 
+    @ApiModelProperty(notes = "页面配置")
+    private PageConfig pageConfig;
+
     @ApiModelProperty(notes = "所属应用编码")
     private String appCode;
+
+    @Data
+    public static class PageConfig {
+
+        @ApiModelProperty(notes = "背景色")
+        private String bgColor;
+
+        @ApiModelProperty(notes = "背景图")
+        private String bg;
+
+        @ApiModelProperty(notes = "组件标题线宽度")
+        private String titleLineWidth;
+
+        @ApiModelProperty(notes = "组件标题线颜色")
+        private String titleLineColor;
+
+        @ApiModelProperty(notes = "组件标题字体大小")
+        private String titleFontSize;
+
+        @ApiModelProperty(notes = "组件标题字体颜色")
+        private String titleFontColor;
+
+    }
 
 }
