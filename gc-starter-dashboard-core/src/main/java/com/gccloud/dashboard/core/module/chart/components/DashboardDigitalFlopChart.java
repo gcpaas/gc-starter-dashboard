@@ -58,6 +58,9 @@ public class DashboardDigitalFlopChart extends Chart {
         @ApiModelProperty(notes = "占位符")
         private String placeHolder;
 
+        @ApiModelProperty(notes = "高度")
+        private Integer height;
+
 
 
     }
