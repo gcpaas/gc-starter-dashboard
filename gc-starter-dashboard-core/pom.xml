@@ -152,6 +152,11 @@
             <type>pom</type>
             <version>${groovy.version}</version>
         </dependency>
+        <dependency>
+            <groupId>org.kohsuke</groupId>
+            <artifactId>groovy-sandbox</artifactId>
+            <version>1.19</version>
+        </dependency>
         <!--  caffeine缓存  -->
         <dependency>
             <groupId>com.github.ben-manes.caffeine</groupId>

@@ -95,9 +95,9 @@ public class GroovyUtils {
     }
 
     public static Class<?> buildClassSafe(String groovyScript) {
-        // java通过正则的方式，判断一个groovy脚本中是否包含文件操作
-        boolean b = containsFileOperation(groovyScript);
-        if (b) {
+        // GroovyInterceptor无法拦截java API的调用，所以这里使用正则表达式判断是否包含文件操作的代码
+        boolean fileOperation = containsFileOperation(groovyScript);
+        if (fileOperation) {
             throw new GlobalException("脚本中包含不安全的代码，可能为while循环、goto、闭包、文件操作等");
         }
         // 自定义配置
@@ -106,7 +106,7 @@ public class GroovyUtils {
         SecureASTCustomizer secure = new SecureASTCustomizer();
         // 禁止使用闭包
         secure.setClosuresAllowed(true);
-        // 禁止使用文件操作
+        // 禁止使用文件操作（实际上这个也无法完全限制，因为File类可以不import直接使用）
         secure.setDisallowedImports(Lists.newArrayList("java.io.File"));
         secure.setDisallowedReceivers(Lists.newArrayList("java.io.File"));
         List<Integer> tokensBlacklist = new ArrayList<>();
@@ -148,7 +148,7 @@ public class GroovyUtils {
 
     public static boolean containsFileOperation(String groovyScript) {
         // 匹配文件操作相关的语句
-        Pattern pattern = Pattern.compile("(new\\s+)?(File|Reader|Writer|InputStream|OutputStream)\\s*\\(");
+        Pattern pattern = Pattern.compile("(new\\s+)?(jave.io.File|File|Reader|Writer|InputStream|OutputStream)\\s*\\(");
         Matcher matcher = pattern.matcher(groovyScript);
 
         // 如果匹配到了，则说明包含文件操作相关语句
