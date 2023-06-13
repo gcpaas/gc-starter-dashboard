@@ -68,8 +68,9 @@ public class GroovyUtils {
             Object result = script.run();
             return result;
         } catch (Exception e) {
+            CACHE_CLASS.invalidate(groovyScript);
             log.error(ExceptionUtils.getStackTrace(e));
-            throw new GlobalException("脚本执行失败", e);
+            throw new GlobalException("脚本执行失败，可能为语法错误或包含不安全的代码(while循环、goto、闭包、文件操作等)");
         }
     }
 
@@ -159,8 +160,9 @@ public class GroovyUtils {
     static class NoSystemExitSandbox extends GroovyInterceptor {
         @Override
         public Object onStaticCall(Invoker invoker, Class receiver, String method, Object... args) throws Throwable {
-            if (receiver == System.class && method.equals("exit")) {
-                throw new SecurityException("No call on System.exit() please");
+            List<String> methods = Lists.newArrayList("exit", "halt", "setSecurityManager", "getenv");
+            if (receiver == System.class && methods.contains(method)) {
+                throw new SecurityException("No call on System please");
             }
             return super.onStaticCall(invoker, receiver, method, args);
         }
