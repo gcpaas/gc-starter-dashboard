@@ -151,6 +151,11 @@ public interface PageDesignConstant {
              */
             String ICON_LINK = "icon_link";
 
+            /**
+             * 数字
+             */
+            String BIG_NUMBER = "bigNumber";
+
         }
 
         interface TimeRange {
