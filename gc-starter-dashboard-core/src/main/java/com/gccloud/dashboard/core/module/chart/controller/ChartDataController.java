@@ -42,7 +42,7 @@ public class ChartDataController {
 
     @PostMapping("/list")
     @ApiOperation(value = "图表数据", position = 10, notes = "获取指定图表的数据(通过唯一编码)", produces = MediaType.APPLICATION_JSON_VALUE)
-    public R<ChartDataVO> basicTableList(@RequestBody ChartDataSearchDTO chartDataSearchDTO) {
+    public R<ChartDataVO> getChartDataByCode(@RequestBody ChartDataSearchDTO chartDataSearchDTO) {
         PageEntity pageEntity = pageService.getByCode(chartDataSearchDTO.getPageCode());
         AssertUtils.isTrue(pageEntity != null, "页面不存在");
         BasePageDTO config = pageEntity.getConfig();
@@ -60,7 +60,7 @@ public class ChartDataController {
 
     @PostMapping("/chart")
     @ApiOperation(value = "图表数据", position = 10, notes = "获取指定图表的数据(通过配置)", produces = MediaType.APPLICATION_JSON_VALUE)
-    public R<ChartDataVO> getChartData(@RequestBody ChartDataSearchDTO chartDataSearchDTO) {
+    public R<ChartDataVO> getChartDataByChart(@RequestBody ChartDataSearchDTO chartDataSearchDTO) {
         PageEntity pageEntity = pageService.getByCode(chartDataSearchDTO.getPageCode());
         AssertUtils.isTrue(pageEntity != null, "页面不存在");
         BasePageDTO config = pageEntity.getConfig();
