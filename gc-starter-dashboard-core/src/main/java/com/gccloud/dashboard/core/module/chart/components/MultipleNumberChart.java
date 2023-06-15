@@ -17,14 +17,11 @@ import java.util.List;
 @Data
 public class MultipleNumberChart extends Chart {
 
-    @ApiModelProperty(notes = "子标题")
-    private String subHeader;
-
     @ApiModelProperty(notes = "类型")
     private String type = PageDesignConstant.DashBoard.Type.MULTIPLE_NUMBER;
 
     @ApiModelProperty(notes = "个性化")
-    private List<Customize> customizeList = Lists.newArrayList();
+    private Customize customize;
 
 
     /**
@@ -33,32 +30,39 @@ public class MultipleNumberChart extends Chart {
     @Data
     public static class Customize {
 
-        @ApiModelProperty(notes = "指标")
-        private String metric;
-
-        @ApiModelProperty(notes = "指标名称")
-        private String descriptionField;
-
-        @ApiModelProperty(notes = "指标字体大小")
-        private Integer metricFontSize = 30;
-
-        @ApiModelProperty(notes = "指标字体权重")
-        private Integer metricFontWeight = 700;
-
-        @ApiModelProperty(notes = "指标字体颜色")
-        private String metricColor;
-
-        @ApiModelProperty(notes = "描述字体大小")
-        private Integer descriptionFontSize = 30;
-
-        @ApiModelProperty(notes = "描述字体权重")
-        private Integer descriptionWeight = 700;
-
-        @ApiModelProperty(notes = "描述字体颜色")
-        private String descriptionColor;
-
-        @ApiModelProperty(notes = "指标格式")
-        private String numberFormat = "kilobit";
-
+        @ApiModelProperty("数字配置列表")
+        private List<NumberConfig> customizeList;
     }
+
+    @Data
+    public static class NumberConfig {
+
+            @ApiModelProperty(notes = "指标")
+            private String metric;
+
+            @ApiModelProperty(notes = "指标名称")
+            private String descriptionField;
+
+            @ApiModelProperty(notes = "指标字体大小")
+            private Integer metricFontSize;
+
+            @ApiModelProperty(notes = "指标字体权重")
+            private Integer metricFontWeight;
+
+            @ApiModelProperty(notes = "指标字体颜色")
+            private String metricColor;
+
+            @ApiModelProperty(notes = "描述字体大小")
+            private Integer descriptionFontSize;
+
+            @ApiModelProperty(notes = "描述字体权重")
+            private Integer descriptionWeight;
+
+            @ApiModelProperty(notes = "描述字体颜色")
+            private String descriptionColor;
+
+            @ApiModelProperty(notes = "指标格式")
+            private String numberFormat;
+    }
+
 }
